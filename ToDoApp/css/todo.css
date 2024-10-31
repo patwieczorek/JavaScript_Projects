@@ -26,3 +26,8 @@ li {
     list-style: none;
     margin: 0;
 }
+
+footer {
+    border: thick;
+    border-color: black;
+}
