@@ -34,6 +34,16 @@ function placeXOrO(squareNumber) {
             activePlayer = 'X';
         }
 
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+          }
+          
+          function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+          }
+
+
+
         //This function plays placement sound.
         audio('./media/woosh.mp3');
         //This condition checks to see if it is the computers turn.
@@ -228,3 +238,4 @@ function resetGame() {
     //This resets our array so it is empty and we can start over. 
     selectedSquares = [];
 }
+
