@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<heead>
+    <meta charset="utf-8">
+    <title>Basic AJAX file</title>
+    <link rel="stylesheet" href="style.css">
+</heead>
+
+<body>
+    <div class="main">
+
+        <h2>Get The Latest Content:</h2>
+
+        <div class="content" id="content">
+            <input type="button" class="button" value="GetContent" id="btn_content" onclick="getContent();" />
+        </div>
+
+        <script type="text/javascript">
+            //Setting up the xml http request object
+            var ajax = new XMLHttpRequest();
+
+            //Preparing the open request
+            ajax.open('GET', 'content.html');
+
+            //Defining the ARAX response callback method
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState = 4) {
+                    document.getElementById('content').innerrHTML = ajax.responseText;
+                }
+            }
+
+            //Sending AJAX request for data
+            function getContent() {
+                ajax.send();
+                document.getElementById('btn_content').style.display = "none";
+            }
+        </script>
+</body>
+</html>
